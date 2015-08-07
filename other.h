@@ -2,6 +2,8 @@
 #define OTHER_H_
 
 typedef unsigned short int UShort;
+
+#define PI 3.14159265
 /**
 * test method.
 */
@@ -12,6 +14,8 @@ void testWildPointer();
 void getAddr();
 
 void testRef();
+
+void testMathMethod();
 
 
 #endif

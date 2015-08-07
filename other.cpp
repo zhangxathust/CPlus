@@ -1,6 +1,8 @@
 #include <iostream>
 #include "other.h"
 
+#include <cmath>
+
 using namespace std;
 
 void testPointer()
@@ -85,4 +87,13 @@ void testRef()
 	cout << "&intTwo: " << &intTwo << endl;
 	cout << "&rSomeRef: " << &rSomeRef << endl;
 
+}
+
+void testMathMethod()
+{
+	// 三角函数用的是PI来进行计算，atan(1.0) = PI / 4 = 45度
+	cout << sqrt(2) << endl;
+	cout << sin(PI / 6) << endl;
+
+	cout << atan(1.0) * 4 / PI << endl;
 }

@@ -2,6 +2,7 @@
 #include "mytime0.h"
 #include "other.h"
 #include "stock.h"
+#include "vector.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ int main()
 	//testRef();
 
 	//Stock stock1("zhang", 20, 40.0);
+	
 	Time planning;
 	Time coding(2, 40);
 	Time fixing(5, 55);
@@ -25,6 +27,18 @@ int main()
 	cout << "planning time = ";
 	planning.show();
 	cout << endl;
+
+	cout << "coding time = " << coding << endl;
+
+	cout << "fixing time = " << fixing << endl;
+
+	total = coding + fixing;
+
+	cout << "total time = " << total << endl;
+	
+	//testMathMethod();
+
+	// test Vector.
 
 	return 0;
 }
