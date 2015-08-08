@@ -18,7 +18,7 @@ int main()
 	//testRef();
 
 	//Stock stock1("zhang", 20, 40.0);
-	
+	/*
 	Time planning;
 	Time coding(2, 40);
 	Time fixing(5, 55);
@@ -35,10 +35,11 @@ int main()
 	total = coding + fixing;
 
 	cout << "total time = " << total << endl;
-	
+	*/
 	//testMathMethod();
 
 	// test Vector.
+	testVector();
 
 	return 0;
 }

@@ -1,6 +1,10 @@
 #include <iostream>
 #include "other.h"
 
+#include "vector.h"
+#include <cstdlib>
+#include <ctime>
+
 #include <cmath>
 
 using namespace std;
@@ -96,4 +100,52 @@ void testMathMethod()
 	cout << sin(PI / 6) << endl;
 
 	cout << atan(1.0) * 4 / PI << endl;
+}
+
+void testVector()
+{
+	using VECTOR::Vector;
+	srand(time(0));
+	double direction;
+	double dstep;
+	Vector step;
+	Vector result(0.0, 0.0);
+	unsigned long steps = 0;
+	double target;
+
+	cout << "enter target distance (q to quit)";
+
+	while(cin >> target)
+	{
+		cout << "enter step length:";
+		
+		if(!(cin >> dstep))
+		{
+			break;
+		}
+
+		while(result.magval() < target)
+		{
+			direction = rand() % 360;
+			step.reset(dstep, direction, Vector::POLAR);
+			result = result + step;
+			steps ++;
+		}
+
+		cout << "after " << steps << " steps, the subject has the following location:" << result << endl;
+		result.polar_mode();
+		cout << "or, the following location is " << result << endl;
+		cout << "average outward distance per step = " << result.magval() / steps << endl;
+		// reset job.
+		steps = 0;
+		result.reset(0.0, 0.0);
+
+		cout << "enter target distance (q to quit)";
+	}
+	cout << "Bye." << endl;
+	cin.clear();
+	while(cin.get() != '\n')
+	{
+		continue;
+	}
 }
