@@ -4,6 +4,7 @@
 #include "vector.h"
 #include <cstdlib>
 #include <ctime>
+#include <fstream>
 
 #include <cmath>
 
@@ -102,6 +103,9 @@ void testMathMethod()
 	cout << atan(1.0) * 4 / PI << endl;
 }
 
+/**
+* bug exist!!!!!  TODO bug fix.
+*/
 void testVector()
 {
 	using VECTOR::Vector;
@@ -112,6 +116,10 @@ void testVector()
 	Vector result(0.0, 0.0);
 	unsigned long steps = 0;
 	double target;
+
+	// output every result to  file.
+	ofstream fout;
+	fout.open("walk.txt");
 
 	cout << "enter target distance (q to quit)";
 
@@ -130,6 +138,8 @@ void testVector()
 			step.reset(dstep, direction, Vector::POLAR);
 			result = result + step;
 			steps ++;
+			fout << "step " << steps << result << endl;
+
 		}
 
 		cout << "after " << steps << " steps, the subject has the following location:" << result << endl;

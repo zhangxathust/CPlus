@@ -19,4 +19,4 @@ vector.o : vector.cpp vector.h
 	g++ -c vector.cpp
 
 clean:
-	rm test.o mytime0.o other.o stock.o vector.o test
+	rm test.o mytime0.o other.o stock.o vector.o test walk.txt
