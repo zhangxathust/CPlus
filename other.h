@@ -21,5 +21,8 @@ void testMathMethod();
 
 void testVector();
 
+//void testStringBad();
+
+
 
 #endif

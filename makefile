@@ -18,5 +18,15 @@ stock.o : stock.cpp stock.h
 vector.o : vector.cpp vector.h
 	g++ -c vector.cpp
 
+# another test project
+vegnews : vegnews.o stringbad.o
+	g++ -o vegnews vegnews.o stringbad.o
+
+vegnews.o : vegnews.cpp stringbad.h
+	g++ -c vegnews.cpp
+
+stringbad.o : stringbad.cpp stringbad.h
+	g++ -c stringbad.cpp
+
 clean:
-	rm test.o mytime0.o other.o stock.o vector.o test walk.txt
+	rm test.o mytime0.o other.o stock.o vector.o test walk.txt stringbad.o vegnews.o vegnews
