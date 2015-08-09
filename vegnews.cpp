@@ -1,12 +1,10 @@
 #include <iostream>
 #include "stringbad.h"
+#include "vegnews.h"
 
 using std::cout;
 
-void callme1(StringBad &);
-void callme2(StringBad);
-
-int main()
+void testStringBad()
 {
 	using std::endl;
 	{
@@ -30,7 +28,6 @@ int main()
 		cout << "existing the block.\n";
 	}
 	cout << "end of main()" << endl;
-	return 0;
 }
 
 void callme1(StringBad & rsb)

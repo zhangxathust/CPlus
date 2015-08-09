@@ -3,6 +3,8 @@
 #include "other.h"
 #include "stock.h"
 #include "vector.h"
+#include "vegnews.h"
+#include "stringbad.h"
 
 using namespace std;
 
@@ -39,7 +41,9 @@ int main()
 	//testMathMethod();
 
 	// test Vector.
-	testVector();
+	//testVector();
 
+	// test StringBad.
+	testStringBad();
 	return 0;
 }
