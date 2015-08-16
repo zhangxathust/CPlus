@@ -3,6 +3,8 @@
 
 //#include "vector.h"
 
+#include "string.h"
+
 typedef unsigned short int UShort;
 
 #define PI 3.14159265
@@ -21,7 +23,7 @@ void testMathMethod();
 
 void testVector();
 
-//void testStringBad();
+void testString();
 
 
 

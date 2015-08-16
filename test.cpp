@@ -5,6 +5,7 @@
 #include "vector.h"
 #include "vegnews.h"
 #include "stringbad.h"
+#include "string.h"
 
 using namespace std;
 
@@ -44,6 +45,7 @@ int main()
 	//testVector();
 
 	// test StringBad.
-	testStringBad();
+	//testStringBad
+	testString();
 	return 0;
 }

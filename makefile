@@ -1,9 +1,9 @@
 # makefile @see http://blog.csdn.net/liang13664759/article/details/1771246
 
-test : test.o mytime0.o other.o stock.o vector.o vegnews.o stringbad.o
-	g++ -o test test.o mytime0.o other.o stock.o vector.o vegnews.o stringbad.o
+test : test.o mytime0.o other.o stock.o vector.o vegnews.o stringbad.o string.o
+	g++ -o test test.o mytime0.o other.o stock.o vector.o vegnews.o stringbad.o string.o
 
-test.o : test.cpp mytime0.h other.h stock.h vegnews.h stringbad.h
+test.o : test.cpp mytime0.h other.h stock.h vegnews.h stringbad.h string.h
 	g++ -c test.cpp
 
 mytime0.o : mytime0.cpp mytime0.h
@@ -24,6 +24,9 @@ stringbad.o : stringbad.cpp stringbad.h
 vegnews.o : vegnews.cpp vegnews.h stringbad.h
 	g++ -c vegnews.cpp
 
+string.o : string.cpp string.h
+	g++ -c string.cpp
+
 
 clean:
-	rm test.o mytime0.o other.o stock.o vector.o test walk.txt stringbad.o vegnews.o
+	rm test.o mytime0.o other.o stock.o vector.o test walk.txt stringbad.o vegnews.o string.o
